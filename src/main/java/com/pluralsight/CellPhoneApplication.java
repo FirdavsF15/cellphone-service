@@ -27,6 +27,14 @@ public class CellPhoneApplication {
         telly.setPhoneNumber(phoneNumber);
         telly.setOwner(owner);
 
+        System.out.printf("""
+                The phone's serial number is %d
+                Model: %s
+                Carrier: %s
+                Phone Number = %s
+                Owned by %s
+                """, telly.getSerialNumber(), telly.getModel(), telly.getCarrier(), telly.getPhoneNumber(), telly.getOwner() );
+
 
 
     }
