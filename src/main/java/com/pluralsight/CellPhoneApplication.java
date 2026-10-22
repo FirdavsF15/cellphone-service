@@ -31,11 +31,19 @@ public class CellPhoneApplication {
                 The phone's serial number is %d
                 Model: %s
                 Carrier: %s
-                Phone Number = %s
+                Phone Number:  %s
                 Owned by %s
                 """, telly.getSerialNumber(), telly.getModel(), telly.getCarrier(), telly.getPhoneNumber(), telly.getOwner() );
 
+        //testing out dial method from CellPhone class
+        telly.dial("646-975-8267");
 
+        //second instance of CellPhone class
+        CellPhone trapPhone = new CellPhone();
+
+    }
+
+    public static void display(CellPhone phone){
 
     }
 }
