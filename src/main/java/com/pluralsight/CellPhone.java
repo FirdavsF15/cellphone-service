@@ -9,11 +9,7 @@ public class CellPhone {
     private String owner;
 
     public CellPhone(){
-        this.serialNumber = 0;
-        this.model = "";
-        this.carrier = "";
-        this.phoneNumber = "";
-        this.owner = "";
+
     }
 
     public CellPhone(int serialNumber, String model, String carrier, String phoneNumber, String owner){
