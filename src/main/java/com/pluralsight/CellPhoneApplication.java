@@ -27,6 +27,7 @@ public class CellPhoneApplication {
         telly.setPhoneNumber(phoneNumber);
         telly.setOwner(owner);
 
+        /*
         System.out.printf("""
                 The phone's serial number is %d
                 Model: %s
@@ -34,17 +35,33 @@ public class CellPhoneApplication {
                 Phone Number:  %s
                 Owned by %s
                 """, telly.getSerialNumber(), telly.getModel(), telly.getCarrier(), telly.getPhoneNumber(), telly.getOwner() );
+        */
 
         //testing out dial method from CellPhone class
-        telly.dial("646-975-8267");
+        //telly.dial("646-975-8267");
 
         //second instance of CellPhone class
-        CellPhone trapPhone = new CellPhone();
+        CellPhone trapPhone = new CellPhone(123123,"Samsung flip", "verizon", "123-456-7890", "kvadrat");
+
+
+        display(trapPhone);
+        display(telly);
+
+        trapPhone.dial(telly.getPhoneNumber());
+        System.out.println();
+        telly.dial(trapPhone.getPhoneNumber());
 
     }
 
     public static void display(CellPhone phone){
-
+        System.out.printf("""
+                The phone's serial number is %d
+                Model: %s
+                Carrier: %s
+                Phone Number:  %s
+                Owned by %s
+                """, phone.getSerialNumber(), phone.getModel(), phone.getCarrier(), phone.getPhoneNumber(), phone.getOwner() );
+        System.out.println();
     }
 }
 
